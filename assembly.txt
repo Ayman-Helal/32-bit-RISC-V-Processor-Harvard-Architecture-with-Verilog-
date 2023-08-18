@@ -1,0 +1,10 @@
+0 : addi  r0 , r0 ,300     I
+4 : addi  r1 , r1 , 1      I 
+loop
+8 : addi  r2,  r2 , 1      I
+12 : add  r3,  r3 , r2     R
+16 : sw   r3,  r7          S
+20 : slt  r4,  r3 , r0     R
+24 : lw   r32, 0(r16)      L
+28 : beq  r4, r1, loop     B
+32 : jal  r10, 24          J
